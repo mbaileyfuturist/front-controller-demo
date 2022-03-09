@@ -32,10 +32,9 @@ public class FrontController extends HttpServlet {
 			break;
 		case "employees":
 			// call some type of method to process that and pass the request and response objects
+			RequestHelper.processEmployees(request, response); // returns a JSON string of all the employees in the DB
 			break;
 		}
-		
-		
 
 	}
 
