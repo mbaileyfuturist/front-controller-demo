@@ -1,9 +1,14 @@
+#version: Represents the verion of the build spec standard being used. 
 version: 0.2
 
+#phases: Represents the build phases during which you can instruct CodeBuild to run commands.
 phases:
   build:
     commands:
       - mvn clean package
+      
+#artifacts: Represents the set of build output artifacts that CodeBuild uploads to the output bucket.
+#files: Represents the files to include in the build output.
 artifacts:
   files:
     - 'Dockerfile'
